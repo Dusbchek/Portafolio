@@ -73,7 +73,7 @@
           white-space: nowrap;
           overflow: hidden;    
           font-family: 'Source Code Pro', monospace;  
-          font-size: 28px;
+          font-size: 24px;
           color: rgb(143, 173, 150);
           margin: 0 auto;
           
@@ -405,6 +405,8 @@ window.scrollTo({
 </script>
 
 </script>
+
+
 <div class="flex flex-col">
 <div class="flex justify-items-center justify-center min-h-screen">
 <div class="flex items-center justify-center">
@@ -500,7 +502,7 @@ transition: all 0.5s ease-in-out; /* Suaviza cualquier transición si es necesar
   </div>
 </div>
 
-<h2 class="p1 font-bold text-3xl tracking-[1px] mt-8 mb-10"> Proyectos destacados</h2>
+<h2 class="p1 font-bold text-xl md:text-3xl tracking-[1px] mt-8 mb-10"> Proyectos destacados</h2>
 
 <div class="mt-10 mb-10">
   <div class="md:hidden w-[90%] mx-auto">
