@@ -1,5 +1,23 @@
 {
+    "name": "yourusername/yourproject",  
+    "description": "A Jigsaw project",
     "require": {
+        "php": "^8.2",
         "tightenco/jigsaw": "^1.7"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "source/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan package:discover --ansi"
+        ]
     }
 }
