@@ -102,95 +102,153 @@
         html {
           scroll-behavior: smooth;
         }
-    article.accordion
-    {
-      display: block;
-      width: 53em;
-      margin: 0 auto;
-      height: auto;
-      background-color: rgba(71, 74, 87, 0.7);
-      overflow: auto;
-      border-radius: 5px;
-      box-shadow: 0 6px 6px rgba(0,0,0,0.3);
-    }
-    article.accordion section
-    {
-      position: relative;
-      display: block;
-      float: left;
-      width: 3.3em;
-      height: 17em;
-      margin: 0.5em 0 0.5em 0.5em;
-      color: #8f8e96;
-      background-color: #9e9e9e;
-      overflow: hidden;
-      border-radius: 3px;
-    
-      
-    }
-    article.accordion section h2
-    {
-      position: absolute;
-      font-size: 1.2em;
-      font-weight: bold;
-      width: 12em;
-      height: 2em;
-      top: 15em;
-      left: 0;
-      text-indent: 4em;
-      padding: 0;
-      margin: 0;
-      color: #ffffff;
-      -webkit-transform-origin: 0 0;
-      -moz-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      -o-transform-origin: 0 0;
-      transform-origin: 0 0;
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      transform: rotate(-90deg);
-    }
-    
-    article.accordion section h2 a
-    {
-      display: block;
-      width: 100%;
-      line-height: 2em;
-      text-decoration: none;
-      color: inherit;
-      outline: 0 none;
-    }article.accordion section:target
-    {
-      width: 36em;
-      padding: 0 1em;
-      color: #050303;
-      background-color: #283541;
-    }
-    
-    article.accordion section:target h2
-    {
-      position: static;
-      font-size: 1.6em;
-      text-indent: 0;
-      color: #bad8c0;
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    article.accordion section,
-    article.accordion section h2
-    {
-      -webkit-transition: all 1s ease;
-      -moz-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-      -o-transition: all 1s ease;
-      transition: all 1s ease;
-    }
-    
+        article.accordion {
+  display: block;
+  width: 53em; /* Ancho por defecto */
+  margin: 0 auto;
+  height: auto;
+  background-color: rgba(71, 74, 87, 0.7);
+  overflow: auto;
+  border-radius: 5px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de artículo */
+article.accordion section {
+  position: relative;
+  display: block;
+  float: left; /* Disposición horizontal */
+  width: 3.3em; /* Ancho inicial de las secciones */
+  height: 17em; /* Altura de las secciones */
+  margin: 0.5em 0 0.5em 0.5em;
+  color: #8f8e96;
+  background-color: #9e9e9e;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+/* Título dentro de cada sección */
+article.accordion section h2 {
+  position: absolute;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 12em;
+  height: 2em; /* Altura de los botones de los títulos */
+  top: 15em;
+  left: 0;
+  text-indent: 4em;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  transform-origin: 0 0;
+  transform: rotate(-90deg); /* Mantener la rotación horizontal */
+}
+
+/* Estilo para los enlaces dentro de los títulos */
+article.accordion section h2 a {
+  display: block;
+  width: 100%;
+  line-height: 2em;
+  text-decoration: none;
+  color: inherit;
+  outline: 0 none;
+}
+
+/* Estilo cuando una sección está seleccionada (target) */
+article.accordion section:target {
+  width: 36em;
+  padding: 0 1em;
+  color: #050303;
+  background-color: #283541;
+}
+
+/* Título cuando la sección está seleccionada */
+article.accordion section:target h2 {
+  position: static;
+  font-size: 1.6em;
+  text-indent: 0;
+  color: #bad8c0;
+  transform: rotate(0deg); /* Sin rotación cuando se selecciona */
+}
+
+/* Transiciones suaves */
+article.accordion section,
+article.accordion section h2 {
+  transition: all 1s ease;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /* Limitar el ancho del contenedor principal */
+  article.accordion {
+    width: 37em; /* Ancho máximo para pantallas pequeñas */
+    padding: 0 1em;
+  }
+
+  /* Reducir el ancho de las secciones dentro del acordeón */
+  article.accordion section {
+    width: 2.5em; /* Reducir el ancho de cada sección */
+    height: 20em; /* Aumentar la altura de las secciones */
+  }
+
+  /* Reducir el contenedor secundario de cada sección */
+  article.accordion section:target {
+    width: 20em; /* Reducir aún más el tamaño cuando una sección está seleccionada */
+    padding: 1em;
+    background-color: #232a34; /* Color de fondo para el contenedor secundario */
+  }
+
+  /* Aumentar la altura de los botones de los títulos */
+  article.accordion section h2 {
+    font-size: 1.3em; /* Aumentar el tamaño del título */
+    height: 2.8em; /* Aumentar la altura de los botones de los títulos */
+    text-indent: 3em; /* Ajustar la indentación */
+    transform: rotate(-90deg); /* Mantener la rotación horizontal */
+  }
+
+  /* Estilo cuando una sección está seleccionada */
+  article.accordion section:target {
+    width: 22em;
+    height: 27em;
+    padding: 1em;
+    background-color: #283541;
+  }
+}
+
+/* Media Query para pantallas muy pequeñas (por ejemplo, teléfonos) */
+@media screen and (max-width: 480px) {
+  article.accordion {
+    width: 30em; /* Ancho máximo de 30em */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Reducir el ancho de las secciones aún más */
+  article.accordion section {
+    width: 2em; /* Reducir el ancho de cada sección */
+    height: 26em; /* Aumentar la altura de las secciones */
+  }
+
+  /* Reducir aún más el contenedor secundario */
+  article.accordion section:target {
+    width: 20em; /* Reducir aún más el contenedor secundario */
+    padding: 1em;
+    background-color: #232a34; /* Color de fondo */
+  }
+
+  /* Aumentar la altura de los botones de los títulos */
+  article.accordion section h2 {
+    font-size: 1.4em; /* Aumentar el tamaño del título */
+    height: 3.2em; /* Aumentar la altura de los botones de los títulos */
+    text-indent: 3.5em; /* Ajustar la indentación */
+    transform: rotate(-90deg); /* Mantener la rotación horizontal */
+  }
+
+  article.accordion section:target {
+    padding: 1em;
+  }
+}
+
     
     @keyframes cube {
       from {
@@ -403,7 +461,7 @@ transition: all 0.5s ease-in-out; /* Suaviza cualquier transición si es necesar
 
 
 </style>
-<div id="omg" class="w-[50em]"> 
+<div id="omg" class="w-[37em]  md:w-[50em] ]"> 
 <div class="w-full shadow-2xl rounded-md p-2 text-left ml-2 mb-8  ">
 
 <h1 class="text-lg font-medium text-green-200">Formación academica</h1>
@@ -411,8 +469,8 @@ transition: all 0.5s ease-in-out; /* Suaviza cualquier transición si es necesar
 <div class="flex mt-2 items-center">
 <img src="https://play-lh.googleusercontent.com/8s5VLauUMnH6TEcGopeRmUwFcI-7E2c6_DlKJFj3RSDY05y6uqOyjKF5mZWE8XzdFQ" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
 
-<h1 class="ml-2 text-md font-medium text-green-100 mr-2 "> Ingeniería en Desarrollo de Software - TecMilenio Campus Las Torres </h1>
-<div class="badge badge-accent badge-outline text-sm transform transition-transform duration-300 hover:scale-110">7mo Semestre</div>
+<h1 class="ml-2 text-sm md:text-md font-medium text-green-100 mr-2 truncate w-[70%] md:w-full"> Ingeniería en Desarrollo de Software - TecMilenio Campus Las Torres </h1>
+<div class="badge badge-accent badge-outline text-xs md:text-sm transform transition-transform duration-300 hover:scale-110">7mo Semestre</div>
 
 </div>
 
@@ -423,7 +481,7 @@ transition: all 0.5s ease-in-out; /* Suaviza cualquier transición si es necesar
 <div class="flex mt-2 items-center">
 <img src="{{('assets/images/cashier.png') }}" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
 
-<a  target="_blank" href="https://codersfree.com/cursos/aprende-a-implementar-pasarelas-de-pago-con-laravel" class="ml-2 text-md font-medium text-green-100 mr-2 hover:underline " >Implementación de pasarelas de pago con Laravel Cashier<a>
+<a  target="_blank" href="https://codersfree.com/cursos/aprende-a-implementar-pasarelas-de-pago-con-laravel" class=" truncate ml-2 text-md font-medium text-green-100 mr-2 hover:underline " >Pasarelas de pago con Laravel Cashier<a>
 <div class="badge badge-accent badge-outline text-sm transform transition-transform duration-300 hover:scale-110">Duración: 2 meses</div>
 
 
