@@ -112,7 +112,11 @@
   border-radius: 5px;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
-
+@media screen and (max-width: 768px) {
+  article.accordion {
+    display: none;
+  }
+}
 /* Sección de artículo */
 article.accordion section {
   position: relative;
@@ -407,7 +411,7 @@ window.scrollTo({
     <div class=" items-center">
 
         <image src="{{ ('assets/images/yo.png') }}" alt="profile-pic" class="mask mask-circle rounded-full border-[2px] border-gray-600 shadow-xl h-56 w-56 mb-6 mx-auto transform transition-transform duration-300 hover:scale-110 ">
-        <h2 class="font-bold text-3xl tracking-[1px] mt-4 text-green-200">Alexis Dubschek Saavedra</h2>
+        <h2 class="font-bold text-xl md:text-3xl tracking-[1px] mt-4 text-green-200">Alexis Dubschek Saavedra</h2>
 
     
 
@@ -420,16 +424,16 @@ window.scrollTo({
 
 
 
-<h2 class="tech font-medium text-3xl text-green-200 shadow-green-200  tracking-[1px] mt-4">Tecnologías</h2>
+<h2 class="tech font-medium text-lg md:text-3xl text-green-200 shadow-green-200  tracking-[1px] mt-4">Tecnologías</h2>
 
-<div class="flex    items-center mt-1 gap-0  w-[400px] mx-auto">
-<img class="mx-auto w-16  transform transition-transform duration-300 hover:scale-110" src="https://i.blogs.es/e7b69c/java_logo/450_1000.webp" alt="Java">   
-<img class="w-[2.8rem] mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="html">   
-<img class="mx-auto w-16  transform transition-transform duration-300 hover:scale-110" src="https://www.brandlogopng.com/files/logo/php/php-language-logo-hd-png-image-download-baby-elephant-clipart-qs6r.png" alt="php">   
-<img class="mx-auto w-20  transform transition-transform duration-300 hover:scale-110" src="https://download.logo.wine/logo/Laravel/Laravel-Logo.wine.png" alt="laravel">   
-<img  class="w-8 mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="js">   
-<img class="w-[3.2rem]  mx-auto ml-1  transform transition-transform duration-300 hover:scale-110" src="https://programandoointentandolo.com/wordpress/wp-content/uploads/2017/10/css3-logo.svg" alt="js">   
-<img class="w-8 ml-1  mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://static-00.iconduck.com/assets.00/database-mysql-icon-1954x2048-08uox8qu.png" alt="laravel">   
+<div class="flex    items-center mt-1 gap-0  w-[90%] md:w-[400px] mx-auto">
+<img class="mx-auto w-10 md:w-16  transform transition-transform duration-300 hover:scale-110" src="https://i.blogs.es/e7b69c/java_logo/450_1000.webp" alt="Java">   
+<img class="w-10  md:w-[2.8rem] mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="html">   
+<img class="mx-auto w-10 md:w-16  transform transition-transform duration-300 hover:scale-110" src="https://www.brandlogopng.com/files/logo/php/php-language-logo-hd-png-image-download-baby-elephant-clipart-qs6r.png" alt="php">   
+<img class="mx-auto w-12 md:w-20  transform transition-transform duration-300 hover:scale-110" src="https://download.logo.wine/logo/Laravel/Laravel-Logo.wine.png" alt="laravel">   
+<img  class=" w-6 md:w-8 mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="js">   
+<img class="  w-12 md:w-[3.2rem]  mx-auto ml-1  transform transition-transform duration-300 hover:scale-110" src="https://programandoointentandolo.com/wordpress/wp-content/uploads/2017/10/css3-logo.svg" alt="js">   
+<img class="  w-6 md:w-8 ml-1  mx-auto  transform transition-transform duration-300 hover:scale-110" src="https://static-00.iconduck.com/assets.00/database-mysql-icon-1954x2048-08uox8qu.png" alt="laravel">   
 
 
 
@@ -439,7 +443,7 @@ window.scrollTo({
 <div
   tabindex="0"
   class="dropdown-content card card-compact bg-gray-700 text-primary-content z-[1] w-[300px] p-2 shadow">
-  <div class="card-body ">
+  <div class="card-body mr-10 md:mr-1">
     <h3 class="card-title">Acerca de mi!</h3>
     <p>¡Hola! Soy Alexis Dubschek, estudiante de Ingeniería en Desarrollo de Software en el Tecnológico de Monterrey, actualmente cursando el séptimo semestre. Me considero una persona entusiasta, proactiva, creativa y tenaz, con una gran capacidad para resolver problemas de manera ingeniosa. Si tuviera que destacar una de mis cualidades más fuertes, sin duda sería mi ingenio, que me permite enfrentar desafíos con soluciones innovadoras y efectivas.
     </p>
@@ -461,58 +465,111 @@ transition: all 0.5s ease-in-out; /* Suaviza cualquier transición si es necesar
 
 
 </style>
-<div id="omg" class="w-[37em]  md:w-[50em] ]"> 
-<div class="w-full shadow-2xl rounded-md p-2 text-left ml-2 mb-8  ">
+<div id="omg" class="w-[90%] md:w-[50em]">
+  <div class="w-full shadow-2xl rounded-md p-2 text-left ml-2 mb-8">
+    <h1 class="text-lg font-medium text-green-200">Formación academica</h1>
+    <div class="w-[95%] bg-green-200 h-[1px] rounded-full"></div>
+    <div class="flex mt-2 items-center">
+      <img src="https://play-lh.googleusercontent.com/8s5VLauUMnH6TEcGopeRmUwFcI-7E2c6_DlKJFj3RSDY05y6uqOyjKF5mZWE8XzdFQ" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
+      <h1 class="ml-2 text-xs md:text-md font-medium text-green-100 mr-2">Ingeniería en Desarrollo de Software - TecMilenio Campus Las Torres</h1>
+      <div class="badge badge-accent badge-outline text-[9px] md:text-sm transform transition-transform duration-300 hover:scale-110 hidden md:block">7mo Semestre</div>
+    </div>
 
-<h1 class="text-lg font-medium text-green-200">Formación academica</h1>
-<div class="w-[95%] bg-green-200 h-[1px] rounded-full"></div>
-<div class="flex mt-2 items-center">
-<img src="https://play-lh.googleusercontent.com/8s5VLauUMnH6TEcGopeRmUwFcI-7E2c6_DlKJFj3RSDY05y6uqOyjKF5mZWE8XzdFQ" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
+    <h1 class="text-lg font-medium text-green-200 mt-2">Cursos</h1>
+    <div class="w-[95%] bg-green-200 h-[1px] rounded-full"></div>
 
-<h1 class="ml-2 text-sm md:text-md font-medium text-green-100 mr-2 truncate w-[70%] md:w-full"> Ingeniería en Desarrollo de Software - TecMilenio Campus Las Torres </h1>
-<div class="badge badge-accent badge-outline text-xs md:text-sm transform transition-transform duration-300 hover:scale-110">7mo Semestre</div>
-
-</div>
-
-<h1 class="text-lg font-medium text-green-200 mt-2">Cursos</h1>
-<div class="w-[95%] bg-green-200 h-[1px] rounded-full"></div>
-
-<div>
-<div class="flex mt-2 items-center">
-<img src="{{('assets/images/cashier.png') }}" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
-
-<a  target="_blank" href="https://codersfree.com/cursos/aprende-a-implementar-pasarelas-de-pago-con-laravel" class=" truncate ml-2 text-md font-medium text-green-100 mr-2 hover:underline " >Pasarelas de pago con Laravel Cashier<a>
-<div class="badge badge-accent badge-outline text-sm transform transition-transform duration-300 hover:scale-110">Duración: 2 meses</div>
-
-
-
-</div>
-<div class="flex items-center mt-3">
-<img src="https://laravel-livewire.com/img/twitter.png" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
-
-<a  target="_blank" href="https://codersfree.com/cursos/aprende-laravel-livewire-desde-cero" class="ml-2 text-md font-medium text-green-100 mr-2 hover:underline " >Livewire para aplicaciones web dinamicas<a>
-<div class="badge badge-accent badge-outline text-sm transform transition-transform duration-300 hover:scale-110">Duración: 3 meses</div>
-
-
-
-  </div>
-
-  <div class="flex items-center mt-3">
-    <img src="https://okitup.com/wp-content/uploads/2019/10/laravel.webp" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
-    
-    <a  target="_blank" href="https://codersfree.com/cursos/aprende-laravel-avanzado" class="ml-2 text-md font-medium text-green-100 mr-2 hover:underline " >Curso avanzado de Laravel Back-End / Front-end<a>
-    <div class="badge badge-accent badge-outline text-sm transform transition-transform duration-300 hover:scale-110">Duración: 2 meses</div>
-    
-    
-    
+    <div>
+      <div class="flex mt-2 items-center">
+        <img src="{{('assets/images/cashier.png') }}" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
+        <a target="_blank" href="https://codersfree.com/cursos/aprende-a-implementar-pasarelas-de-pago-con-laravel" class="truncate ml-2 text-md font-medium text-green-100 mr-2 hover:underline">Pasarelas de pago con Laravel Cashier</a>
+        <div class="badge badge-accent badge-outline text-xs md:text-sm transform transition-transform duration-300 hover:scale-110 hidden md:block">Duración: 2 meses</div>
       </div>
+
+      <div class="flex items-center mt-3">
+        <img src="https://laravel-livewire.com/img/twitter.png" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
+        <a target="_blank" href="https://codersfree.com/cursos/aprende-laravel-livewire-desde-cero" class="ml-2 text-md font-medium text-green-100 mr-2 hover:underline">Livewire para aplicaciones web dinámicas</a>
+        <div class="badge badge-accent badge-outline text-xs md:text-sm transform transition-transform duration-300 hover:scale-110 hidden md:block">Duración: 3 meses</div>
+      </div>
+
+      <div class="flex items-center mt-3">
+        <img src="https://okitup.com/wp-content/uploads/2019/10/laravel.webp" alt="tecmi" class="w-14 rounded-lg transform transition-transform duration-300 hover:scale-110">
+        <a target="_blank" href="https://codersfree.com/cursos/aprende-laravel-avanzado" class="ml-2 text-md font-medium text-green-100 mr-2 hover:underline">Curso avanzado de Laravel Back-End / Front-end</a>
+        <div class="badge badge-accent badge-outline text-[9px] md:text-sm transform transition-transform duration-300 hover:scale-110 hidden md:block">Duración: 2 meses</div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <h2 class="p1 font-bold text-3xl tracking-[1px] mt-8 mb-10"> Proyectos destacados</h2>
 
 <div class="mt-10 mb-10">
-<article class="accordion">
+  <div class="md:hidden w-[90%] mx-auto">
+    <!-- Sección 1: Java -->
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" id="acc1-toggle" checked="checked" />
+      <div class="collapse-title text-xl font-medium">
+        Java
+      </div>
+      <div class="collapse-content">
+        <p class="text-md">
+          Poseo amplios conocimientos en el lenguaje Java en el que aprendí sobre todo acerca de la programación orientada a objetos, clases, constructores, polimorfismo, abstracción, herencia, etc.
+          En este lenguaje he creado proyectos como:
+        </p>
+        <div class="flex flex-col">
+          <button id="showInfoBtn" class="text-green-100 font-medium underline text-md">Wumpus</button>
+          <button id="showInfoBtn1" class="text-green-100 font-medium underline text-md">La vaca sabia</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sección 2: Back-End -->
+    <div class="collapse collapse-plus bg-base-200 mt-2">
+      <input type="radio" name="my-accordion-3" id="acc2-toggle" />
+      <div class="collapse-title text-xl font-medium">
+        Back-End
+      </div>
+      <div class="collapse-content">
+        <p class="text-sm">
+          Poseo amplios conocimientos en el framework Laravel de PHP con herramientas como Livewire, Volt, Filament, entre otras. A lo largo de mi experiencia, he desarrollado varios proyectos, pero el más destacado es Leshas, un eCommerce completo que abarca tanto el Front-end como el Back-end.
+          Leshas incluye características avanzadas como la integración de pasarelas de pago mediante Laravel Cashier, control de sesiones con JetStream y la implementación de un panel administrativo robusto.
+        </p>
+        <div class="flex flex-col">
+          <button id="showinfo2" class="text-green-100 font-medium underline text-md">Filament</button>
+          <button id="showInfoBtn4" class="text-green-100 font-medium underline text-md">Laravel Cashier/Stripe</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Sección 3: JavaScript/CSS -->
+    <div class="collapse collapse-plus bg-base-200 mt-2">
+      <input type="radio" name="my-accordion-3" id="acc3-toggle" />
+      <div class="collapse-title text-xl font-medium">
+        JavaScript/CSS
+      </div>
+      <div class="collapse-content">
+        <p>
+          He desarrollado interfaces Front-End utilizando las vistas Blade de Laravel, empleando HTML, CSS y JavaScript. He integrado herramientas complementarias como Tailwind CSS y Bootstrap para mejorar la experiencia visual y la estructura del diseño.
+        </p>
+        <button id="showInfoBtn3" class="text-green-100 font-medium underline text-md">Front-End</button>
+      </div>
+    </div>
+  
+    <!-- Sección 4: MySQL -->
+    <div class="collapse collapse-plus bg-base-200 mt-2">
+      <input type="radio" name="my-accordion-3" id="acc4-toggle" />
+      <div class="collapse-title text-xl font-medium">
+        MySQL
+      </div>
+      <div class="collapse-content">
+        <p>
+          He diseñado e implementado bases de datos no relacionales complejas en MySQL como la de Leshas o la del CRUD PetsCare, siguiendo las normas de normalización de bases de datos y decidiendo cuál era el mejor y más eficaz enfoque para los propósitos del proyecto.
+        </p>
+        <button id="showInfoBtn5" class="scrollButton text-green-100 font-medium underline text-md">Bases de datos</button>
+      </div>
+    </div>
+  </div>
+  
+<article class="accordion ">
 
 <section id="acc1">
   <h2><a href="#acc1">Java</a></h2>
