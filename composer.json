@@ -14,10 +14,6 @@
         "psr-4": {
             "App\\": "source/"
         }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "@php artisan package:discover --ansi"
-        ]
     }
+    
 }
